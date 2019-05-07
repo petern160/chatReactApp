@@ -9,7 +9,7 @@ class App extends Component {
   
   
   constructor(props) {
-    super(props);
+  super(props);
   this.state = {
     currentUser: {name: "Bob"}, // optional. if currentUser is not defined, it means the user is Anonymous
     messages: [
@@ -23,7 +23,7 @@ class App extends Component {
       }
     ]
   }
-  
+  this.addMessage = this.addMessage.bind(this)
   }
   
   componentDidMount() {
@@ -38,8 +38,13 @@ class App extends Component {
       this.setState({messages: messages})
     }, 3000);
   }
- 
   
+  
+    addMessage(message) {
+    const oldMessage = this.state.messages;
+    const newMessage = [...oldMessage, message];
+    this.setState({ messages: newMessage });
+  }
   
   render() {
     return (
@@ -49,7 +54,7 @@ class App extends Component {
          <Navbar />
          <MessageList messages = {this.state.messages}/>
          
-         <Chatbar currentUser={this.state.currentUser}/>
+         <Chatbar currentUser={this.state.currentUser} addMessage={this.addMessage}/>
       </div>
      
     );
