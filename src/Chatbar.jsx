@@ -5,7 +5,8 @@ class Chatbar extends Component {
       return (
         <div>
            <footer className="chatbar">
-                <input className="chatbar-username" placeholder="Your Name" />
+                <input className="chatbar-username" placeholder="Your Name" value={this.props.currentUser.name}/> 
+                
                 <input className="chatbar-message" placeholder="Type a message and hit ENTER" />
            </footer>
         </div>
