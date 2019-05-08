@@ -11,11 +11,12 @@ class Chatbar extends Component {
 
   
   render() {
-
+let userName = this.props.currentUser.name.length !== 0 ? this.props.currentUser.name : 'Anonymous'
     const  keyPressEnter = (event) => {
-    if( event.key ==="Enter"){
+    if( event.key === "Enter"){
      const obj = {
-       username: 'Testing',
+       type: 'Message',
+       username: userName,
        content: event.target.value
        
 
