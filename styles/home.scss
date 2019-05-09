@@ -39,6 +39,14 @@ body {
   flex: 2;
 }
 
+.notification,
+.notification-content{
+  overflow: hidden;
+  margin: 5px;
+  padding: 0 10px;
+
+}
+
 .message {
   display: flex;
   padding: 5px;
@@ -53,7 +61,8 @@ body {
 .message-username {
   overflow: hidden;
   margin: 5px;
-  padding: 0 10px;
+  padding: 0 5px;
+  font-style: italic
 }
 
 .message-content {
