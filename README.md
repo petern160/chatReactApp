@@ -1,45 +1,38 @@
-React Boilerplate
-=====================
+# Chatty App
+> Chatty App is a react web application built with React and Websokets
 
-A minimal and light dev environment for ReactJS.
+## Test Cases
 
-### Usage
+Multiple users can connect on the same url and have live chat sessions with each other.
+Each user has a specific color assigned to them
 
-Clone the boilerplate and create your own git repo.
+## About
 
-```
-git clone git@github.com:lighthouse-labs/react-simple-boilerplate.git
-cd react-simple-boilerplate
-git remote rm origin
-git remote add origin [YOUR NEW REPOSITORY]
-# Manually update your package.json file
-```
+This App was a good introductory project to learn about the core principles of React and Websockets. After completing this assignment I have a much better understanding of props,states and React's lifecycle components. Also how to use websockets on the client and server side transmitting data.
 
-Install the dependencies and start the server.
 
-```
-npm install
-npm start
-open http://localhost:3000
-```
+## Dependanices
 
-### Static Files
+    "babel-core": "6.23.1",
+    "babel-loader": "6.3.1",
+    "babel-preset-es2015": "6.22.0",
+    "babel-preset-react": "6.23.0",
+    "babel-preset-stage-0": "6.22.0",
+    "css-loader": "0.26.1",
+    "eslint": "3.15.0",
+    "eslint-plugin-react": "6.9.0",
+    "node-sass": "4.5.0",
+    "sass-loader": "6.0.0",
+    "sockjs-client": "^1.1.2",
+    "style-loader": "0.13.1",
+    "webpack": "2.2.1",
+    "webpack-dev-server": "2.3.0"
 
-You can store static files like images, fonts, etc in the `build` folder.
+## Development setup
 
-For example, if you copy a file called my_image.png into the build folder you can access it using `http://localhost:3000/build/my_image.png`.
+    install the dependancies above
+    then run the file using nodemon with the command npx nodemon app.js
 
-### Linting
+## Final Product
 
-This boilerplate project includes React ESLint configuration.
-
-```
-npm run lint
-```
-
-### Dependencies
-
-* React
-* Webpack
-* [babel-loader](https://github.com/babel/babel-loader)
-* [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
+!["sceenshot of url page"](./docs/ChatApp.png)
