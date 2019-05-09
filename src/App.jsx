@@ -27,14 +27,15 @@ class App extends Component {
 
 
     ws.onmessage = evt => {
-      // on receiving a message, add it to the list of messages
-      
+      const loggedUsers = JSON.parse(evt.data)
+      console.log(`this is clients logged info: `,loggedUsers)
+      if(loggedUsers.clientNumber){
+        this.setState ({clientNumber: loggedUsers.clientNumber})
+        return;
+      }
       const message = JSON.parse(evt.data)
       console.log(message)
       this.addToPage(message)
-
-      this.setState ({count: evt})
-
     }
   }
 
@@ -59,7 +60,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Navbar clientNumber={this.state.clientNumber} />
         <MessageList messages={this.state.messages} />
 
         <Chatbar
