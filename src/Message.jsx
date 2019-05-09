@@ -2,6 +2,9 @@ import React, { Component } from "react";
 
 
 const Message = ({ message }) => {
+  let userNameColor = {
+    color: message.color
+  }
   return message.type === "incomingNotification" ? (
       <div className="notification">
         
@@ -9,7 +12,7 @@ const Message = ({ message }) => {
 </div>
   ) : (
     <div className="message">
-      <span className="message-username">{message.username}</span>
+      <span className="message-username" style={userNameColor}>{message.username}</span>
       <span className="message-content">{message.content}</span>
     </div>
   );

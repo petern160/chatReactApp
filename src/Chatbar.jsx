@@ -1,24 +1,35 @@
 import React, { Component } from "react";
 import App from "./App.jsx";
 
+
+const letters = `0123456789ABCDEF`;
+   let userColor = `#`;
+   for (let i = 0; i < 6; i++) {
+     userColor += letters[Math.floor(Math.random() * 16)];
+   }
+
+
 class Chatbar extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {
+    // if username is blank becomes Anonymous
     let { currentUser: { name }} = this.props;
     let userName =
     name && name.length !== ""
       ? name
       : 'Anonymous';
 
+      // on enter sends data to server
     const keyPressEnter = event => {
       if (event.key === "Enter") {
         const obj = {
           type: "PostMessage",
           username: userName,
-          content: event.target.value
+          content: event.target.value,
+          color: userColor
         };
         event.target.value = "";
 
@@ -26,6 +37,7 @@ class Chatbar extends Component {
       }
     };
 
+    // on enter updates username and sends username to server
     const enterKeyUser = event => {
       if(event.key ==="Enter"){
         // send obj to server

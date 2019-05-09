@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 
 class Navbar extends Component {
   render() {
+    // displays users or user depends on if client number > 1
     let userCount = this.props.clientNumber > 1 ? ' users online' : ' user online'
     return (
       <div> 
