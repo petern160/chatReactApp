@@ -16,7 +16,7 @@ for (let i = 0; i < 6; i++) {
 class App extends Component {
   constructor(props) {
     super(props);
-    // handles state of users, messages, and clients online
+    // current state of users, messages, and clients online
     this.state = {
       currentUser: { name: "Anonymous" }, // optional. if currentUser is not defined, it means the user is Anonymous
       messages: [],

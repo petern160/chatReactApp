@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+// adds color ot username
 
 const Message = ({ message }) => {
   let userNameColor = {
