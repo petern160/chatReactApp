@@ -32,7 +32,8 @@ This App was a good introductory project to learn about the core principles of R
 
     install the dependancies above with npm i
     open up two terminals
-    cd into websocket folder that is located in the react-simple-boilerplate and start the websocket on port 3001 with node server.js
+    cd into websocket folder that is located in the react-simple-boilerplate 
+    npm install and start the websocket on port 3001 with node server.js
 
     in your second terminal cd into react-simple-boilerplate and npm start this one is hosted on http://0.0.0.0:3000/
 
